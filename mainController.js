@@ -25,8 +25,8 @@ cs142App.config(['$routeProvider',
 cs142App.service('updateToolbar', function() {
     this.toolBar = '';
     this.update = function(status){
-        console.log(this.toolBar);
         this.toolBar = status;
+        console.log(this.toolBar);
     };
 
     this.get = function() {
