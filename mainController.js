@@ -36,11 +36,11 @@ cs142App.service('updateToolbar', function() {
 
 });
 
-cs142App.controller('MainController', ['$scope', 'updateToolbar', 
+cs142App.controller('MainController', ['$scope', '$routeParams', 
     function ($scope, updateToolbar) {
         $scope.main = {};
         $scope.main.title = 'Users';
-        $scope.main.toolBar = updateToolbar.get;
+        $scope.main.toolBar = $routeParams.userId;
     }]);
 
 

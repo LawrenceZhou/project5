@@ -8,7 +8,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams', 'updateTo
      */
     var userId = $routeParams.userId;
     console.log('UserDetail of ', userId);
-    updateToolbar.update(userId);
+    //updateToolbar.update(userId);
     console.log('window.cs142models.userModel($routeParams.userId)',
         window.cs142models.userModel(userId));
 
