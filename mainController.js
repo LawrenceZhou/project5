@@ -32,6 +32,6 @@ cs142App.controller('MainController', ['$scope',
 cs142App.service('updateToolbar', function() {
     this.update = function(status){
         $scope.main.toolbar = status;
-    }
+    };
 
 });
