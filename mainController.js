@@ -34,7 +34,7 @@ cs142App.service('updateToolbar', function() {
 
 });
 
-cs142App.controller('MainController', ['$scope', updateToolbar, 
+cs142App.controller('MainController', ['$scope', 'updateToolbar', 
     function ($scope, updateToolbar) {
         $scope.main = {};
         $scope.main.title = 'Users';
