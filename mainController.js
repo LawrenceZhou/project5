@@ -29,7 +29,9 @@ cs142App.controller('MainController', ['$scope',
         $scope.main.toolbar = '';
     }]);
 
-cs142App.service('updateToolbar', function(status) {
-    $scope.main.toolbar = status;
+cs142App.service('updateToolbar', function() {
+    this.update = function(status){
+        $scope.main.toolbar = status;
+    }
 
 });
