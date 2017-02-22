@@ -28,3 +28,8 @@ cs142App.controller('MainController', ['$scope',
         $scope.main.title = 'Users';
         $scope.main.toolbar = '';
     }]);
+
+cs142App.service('updateToolbar', function(status) {
+    $scope.main.toolbar = status;
+
+});
