@@ -22,16 +22,23 @@ cs142App.config(['$routeProvider',
             });
     }]);
 
-cs142App.controller('MainController', ['$scope',
-    function ($scope) {
-        $scope.main = {};
-        $scope.main.title = 'Users';
-        $scope.main.toolbar = '';
-    }]);
-
 cs142App.service('updateToolbar', function() {
+    this.toolBar = '';
     this.update = function(status){
-        $scope.main.toolbar = status;
+        this.toolBar = status;
+    };
+
+    this.get = function() {
+        return this.toolBar;
     };
 
 });
+
+cs142App.controller('MainController', ['$scope', updateToolbar
+    function ($scope, updateToolbar) {
+        $scope.main = {};
+        $scope.main.title = 'Users';
+        $scope.main.toolbar = updateToolbar.get;
+    }]);
+
+
