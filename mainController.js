@@ -41,7 +41,7 @@ cs142App.controller('MainController', ['$scope', '$route',
         $scope.main = {};
         $scope.main.title = 'Users';
         $scope.main.mode = "";
-        if($route.current.templateUrl != undefined){
+        if($route.current.hasOwnProperty('templateUrl')){
             $scope.main.mode = $route.current.templateUrl;
         }
         $scope.main.toolBar = "";
