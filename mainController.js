@@ -37,10 +37,21 @@ cs142App.service('updateToolbar', function() {
 });
 
 cs142App.controller('MainController', ['$scope', '$route', 
-    function ($scope, updateToolbar, $route) {
+    function ($scope, $route) {
         $scope.main = {};
         $scope.main.title = 'Users';
-        $scope.main.route = $route;
+        $scope.main.mode = $route.current.templateUrl;
+        $scope.main.toolBar = "";
+        if($scope.main.mode === "components/user-list/user-listTemplate.html") {
+            var userId = $route.current.params._id;
+             $scope.main.toolBar = window.cs142models.userModel(userId).first_name +" " + window.cs142models.userModel(userId).last_name;
+           
+        }
+        if($scope.main.mode === "components/user-photos/user-photosTemplate.html") {
+             var userId = $route.current.params._id;
+             $scope.main.toolBar = "Photos of " + window.cs142models.userModel(userId).first_name +" " + window.cs142models.userModel(userId).last_name;
+
+        }
         $scope.main.toolBar = $scope.main.route.current.params;
     }]);
 
