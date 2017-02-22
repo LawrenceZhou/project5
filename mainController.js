@@ -22,8 +22,8 @@ cs142App.config(['$routeProvider',
             });
     }]);
 
-cs142App.controller('MainController', ['$scope', '$route', 
-    function ($scope, $route) {
+cs142App.controller('MainController', ['$scope', 
+    function ($scope) {
         $scope.main = {};
         $scope.main.title = 'Users';
         $scope.main.toolBar = '';
