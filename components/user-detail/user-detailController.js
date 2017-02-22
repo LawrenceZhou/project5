@@ -1,6 +1,6 @@
 'use strict';
 
-cs142App.controller('UserDetailController', ['$scope', '$routeParams',
+cs142App.controller('UserDetailController', ['$scope', '$routeParams', 'updateToolbar', 
   function ($scope, $routeParams, updateToolbar) {
     /*
      * Since the route is specified as '/users/:userId' in $routeProvider config the
