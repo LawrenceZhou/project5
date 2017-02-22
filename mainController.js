@@ -40,7 +40,7 @@ cs142App.controller('MainController', ['$scope', 'updateToolbar',
     function ($scope, updateToolbar) {
         $scope.main = {};
         $scope.main.title = 'Users';
-        $scope.main.toolbar = updateToolbar.get;
+        $scope.main.toolBar = updateToolbar.get;
     }]);
 
 
