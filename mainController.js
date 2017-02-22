@@ -40,7 +40,6 @@ cs142App.controller('MainController', ['$scope', '$routeParams',
     function ($scope, updateToolbar, $routeParams) {
         $scope.main = {};
         $scope.main.title = 'Users';
-        $scope.main.toolBar = $routeParams.userId;
+        $scope.main.toolBar = $route.current.params;
     }]);
-
 
