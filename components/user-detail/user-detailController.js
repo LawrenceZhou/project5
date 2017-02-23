@@ -7,7 +7,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
      * $routeParams  should have the userId property set with the path from the URL.
      */
     var userId = $routeParams.userId;
-    var $scope.user = window.cs142models.userModel(userId);
+    $scope.user = window.cs142models.userModel(userId);
     //$scope.FetchModel("http://localhost:3000/user/{{userId}}", function(model){
     //        var object = JSON.parse(model);
     //        $scope.$apply(function () {
