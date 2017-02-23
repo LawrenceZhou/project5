@@ -17,7 +17,7 @@ ul.cs142Project5 li {
 }
 
 ul.cs142Project5 li:hover {
-	padding:8px 0px 8px 0px;
+	padding:14px 0px 14px 0px;
 	background: #dadbf1;
 	color: #339900;
 	border-left:4px solid #2f36a9;
