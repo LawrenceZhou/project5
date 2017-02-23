@@ -10,16 +10,16 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
     //$scope.user = window.cs142models.userModel(userId);
     var url = "http://localhost:3000/user/" + userId;
     $scope.FetchModel(url, function(model){
-            var object = JSON.parse(model);
-            $scope.$apply(function () {
-                // Put your code that updates any $scope variables here
-                $scope.user = object;
-                var firstName = $scope.user.first_name;
-                var lastName = $scope.user.last_name;
-                $scope.main.toolBar = firstName + " " + lastName;
-                $scope.user.name = firstName + " " + lastName;
-            });
+        var object = JSON.parse(model);
+        $scope.$apply(function () {
+            // Put your code that updates any $scope variables here
+            $scope.user = object;
+            var firstName = $scope.user.first_name;
+            var lastName = $scope.user.last_name;
+            $scope.main.toolBar = firstName + " " + lastName;
+            $scope.user.name = firstName + " " + lastName;
         });
+    });
 
     //var firstName = $scope.user.first_name;
     //var lastName = $scope.user.last_name;
