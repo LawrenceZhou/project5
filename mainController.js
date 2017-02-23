@@ -27,7 +27,6 @@ cs142App.controller('MainController', ['$scope',
         $scope.main = {};
         $scope.main.title = 'Users';
         $scope.main.toolBar = '';
-        $scope.main.version = '';
 
          /*
       * FetchModel - Fetch a model from the web server.
