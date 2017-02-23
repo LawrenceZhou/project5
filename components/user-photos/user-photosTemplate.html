@@ -1,3 +1,4 @@
 <div class = "photoBlock" ng-repeat = "photo in photos">
 <img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}">
+<div class ="comment" ng-repeat = "comment in photo.comments">{{comment.comment}}</div>
 </div>
