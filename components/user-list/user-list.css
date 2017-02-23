@@ -8,7 +8,7 @@ ul.cs142Project5 li {
 	border: 1px solid #f2f2f2;
 	display:block;
 	font-weight:bold;
-	color: #333;	
+	color: #2f36a9;	
 	text-decoration:none;	
 	padding:3px 5px 3px 10px;
 	background: #f2f2f2;
@@ -19,5 +19,5 @@ ul.cs142Project5 li:hover {
 	padding:3px 5px 3px 10px;
 	background: #f2f2f2;
 	color: #339900;
-	border-left:4px solid #9EC630;
+	border-left:4px solid #2f36a9;
 }
