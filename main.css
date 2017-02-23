@@ -7,6 +7,6 @@ cs142-main- here.
 md-toolbar.cs142Project5-toolbar {
 	padding: 0px 12px 0 12px;
 }
-div.cs142Project5-content {
+#content {
 	background-image: url(images/background.jpg);
 }
