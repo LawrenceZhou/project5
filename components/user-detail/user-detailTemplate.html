@@ -1,10 +1,3 @@
-<div class = "subtitle">Personal Information</div>
-<div class="userName">{{user.name}}</div>
-<div class="userLocation">{{user.location}}</div>
-<div class="userOccupation">{{user.occupation}}</div>
-<div class="userDescription">{{user.description}}</div>
-<div class="photoView"><a href="#/photos/{{user._id}}">View the photos</a></div>
-
 <md-card>
     <md-card-title>
       <md-card-title-text>
@@ -18,6 +11,6 @@
 		<div class="userDescription">Description: {{user.description}}</div>
     </md-card-content>
     <md-card-actions layout="column" layout-align="start">
-      <md-button><a href="#/photos/{{user._id}}">View the photos</a></md-button>
+      <md-button><a href="#/photos/{{user._id}}" class = "cs142Project5-view">View the photos</a></md-button>
     </md-card-actions>
 </md-card>
