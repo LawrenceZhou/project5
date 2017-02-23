@@ -1,6 +1,6 @@
 ul.cs142Project5 {
 	list-style:none;
-	margin: 0 0 10px 0px;
+	margin: 10px 0 10px 0px;
 	padding:0;		
 }
 ul.cs142Project5 li {
@@ -17,11 +17,11 @@ ul.cs142Project5 li {
 }
 
 ul.cs142Project5 li:hover {
-	padding:14px 0px 14px 0px;
+	padding:8px 0px 8px 0px;
 	background: #dadbf1;
 	color: #339900;
 	border-left:4px solid #2f36a9;
-	height:54px;
+	font-size: 36px;
 	text-align: center;
 }
 
