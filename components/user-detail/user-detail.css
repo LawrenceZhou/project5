@@ -8,7 +8,6 @@ img.cs142Project5-icon {
 	width: 24px;
 	height: 24px;
 	display:inline-block;
-
 }
 
 div.cs142Project5-item {
@@ -17,5 +16,10 @@ div.cs142Project5-item {
 }
 div.cs142Project5-subHeader {
 	font-size: 18px;
+	color: #2f36a9;
+}
+
+span.md-headline {
+	font-size: 32px;
 	color: #2f36a9;
 }
