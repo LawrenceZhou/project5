@@ -43,8 +43,6 @@ cs142App.controller('MainController', ['$scope',
         xhr.onreadystatechange = xhrHandler;
         xhr.open("GET", url);
         xhr.send();
-        console.log(model);
-        doneCallback(model);
 
      function xhrHandler() {
         console.log(this.readyState, this.status);
@@ -57,6 +55,8 @@ cs142App.controller('MainController', ['$scope',
     return;
  }
 model = this.responseText;
+        console.log(model);
+        doneCallback(model);
      };
  }
 
