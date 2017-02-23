@@ -38,7 +38,7 @@ cs142App.controller('MainController', ['$scope',
       *                  the error case.
       */
      $scope.FetchModel = function(url, doneCallback) {
-        xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = xhrHandler;
         xhr.open("GET", url);
         xhr.send();
