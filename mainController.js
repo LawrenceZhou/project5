@@ -62,6 +62,7 @@ model = this.responseText;
 
     $scope.FetchModel("http://localhost:3000/test/info", function(model){
         var object = JSON.parse(model);
+        console.log(object);
         $scope.$apply(function () {
         // Put your code that updates any $scope variables here
         $scope.main.version = object.__v;
