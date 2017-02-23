@@ -47,6 +47,7 @@ cs142App.controller('MainController', ['$scope',
         doneCallback(model);
 
      function xhrHandler() {
+        console.log(this.readyState, this.status);
   //Don’t do anything if not final state
  if (this.readyState!== 4){ 
     return; 
