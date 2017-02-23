@@ -56,6 +56,7 @@ cs142App.controller('MainController', ['$scope',
  }
 
      };
+ }
 
     $scope.FetchModel("http://localhost:3000/test/info", function(model){
         var object = JSON.parse(model);
