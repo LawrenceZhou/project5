@@ -15,6 +15,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
             $scope.$apply(function () {
             // Put your code that updates any $scope variables here
             $scope.user = object;
+            console.log($scope.user);
             });
         });
 
