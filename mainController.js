@@ -43,6 +43,7 @@ cs142App.controller('MainController', ['$scope',
         xhr.open("GET", url);
         xhr.send();
         var model = this.responseText;
+        console.log(model);
         doneCallback(model);
 
      function xhrHandler() {
