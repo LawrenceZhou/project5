@@ -8,16 +8,17 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
      */
 
     var userId = $routeParams.userId;
-    console.log('UserDetail of ', userId);
-    var firstName = window.cs142models.userModel(userId).first_name;
-    var lastName = window.cs142models.userModel(userId).last_name;
+    var firstName = userObject.first_name;
+    var lastName = userObject.last_name;
     $scope.main.toolBar = firstName + " " + lastName;
+
+    var userObject = window.cs142models.userModel(userId);
     $scope.user = {};
     $scope.user.id = userId;
     $scope.user.name = firstName + " " + lastName;
-    $scope.user.location = window.cs142models.userModel(userId).location;
-    $scope.user.occupation = window.cs142models.userModel(userId).occupation;
-    $scope.user.discription = window.cs142models.userModel(userId).discription;
+    $scope.user.location = userObject.location;
+    $scope.user.occupation = userObject.occupation;
+    $scope.user.discription = userObject.discription;
     console.log('window.cs142models.userModel($routeParams.userId)',
         window.cs142models.userModel(userId));
 
