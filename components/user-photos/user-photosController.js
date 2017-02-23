@@ -13,7 +13,7 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams',
     $scope.main.toolBar = "Photos of " + firstName + " " + lastName;
 
     //$scope.photos = {};
-    $scope.photos = window.cs142models.photoOfUserModel(userId));
+    $scope.photos = window.cs142models.photoOfUserModel(userId);
 
     console.log('window.cs142models.photoOfUserModel($routeParams.userId)',
        window.cs142models.photoOfUserModel(userId));
