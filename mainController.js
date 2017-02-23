@@ -66,6 +66,7 @@ model = this.responseText;
         $scope.$apply(function () {
         // Put your code that updates any $scope variables here
         $scope.main.version = object.__v;
+        console.log($scope.main.version);
         });
     });
 
