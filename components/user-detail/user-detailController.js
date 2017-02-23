@@ -20,6 +20,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
         });
 
     var firstName = $scope.user.first_name;
+    console.log($scope.user.first_name, firstName);
     var lastName = $scope.user.last_name;
     $scope.main.toolBar = firstName + " " + lastName;
     $scope.user.name = firstName + " " + lastName;
