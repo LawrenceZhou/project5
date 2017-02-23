@@ -39,10 +39,10 @@ cs142App.controller('MainController', ['$scope',
       */
      $scope.FetchModel = function(url, doneCallback) {
         var xhr = new XMLHttpRequest();
+        var model;
         xhr.onreadystatechange = xhrHandler;
         xhr.open("GET", url);
         xhr.send();
-        var model = this.responseText;
         console.log(model);
         doneCallback(model);
 
@@ -55,7 +55,7 @@ cs142App.controller('MainController', ['$scope',
  if (this.status !== 200) {
     return;
  }
-
+model = this.responseText;
      };
  }
 
