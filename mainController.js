@@ -36,40 +36,34 @@ cs142App.controller('MainController', ['$scope',
       *                  objectcontaining the model. model is undefined in 
       *                  the error case.
       */
-     $scope.FetchModel = function(url, doneCallback) {
-        var xhr = new XMLHttpRequest();
-        var model;
-        xhr.onreadystatechange = xhrHandler;
-        xhr.open("GET", url);
-        xhr.send();
+        $scope.FetchModel = function(url, doneCallback) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = xhrHandler;
+            xhr.open("GET", url);
+            xhr.send();
+    
+            function xhrHandler() {
+                console.log(this.readyState, this.status);
+                //Don’t do anything if not final state
+                if (this.readyState!== 4){ 
+                    return; 
+                }
+                //Final State but status not OK
+                if (this.status !== 200) {
+                return;
+            }
+            var model = this.responseText;
+            doneCallback(model);
+            };
+        }
 
-     function xhrHandler() {
-        console.log(this.readyState, this.status);
-  //Don’t do anything if not final state
- if (this.readyState!== 4){ 
-    return; 
- }
- //Final State but status not OK
- if (this.status !== 200) {
-    return;
- }
-model = this.responseText;
-        console.log(model);
-        doneCallback(model);
-     };
- }
-
-    $scope.FetchModel("http://localhost:3000/test/info", function(model){
-        var object = JSON.parse(model);
-        console.log(object);
-        $scope.$apply(function () {
-        // Put your code that updates any $scope variables here
-        $scope.main.version = object.__v;
-        console.log($scope.main.version);
+        $scope.FetchModel("http://localhost:3000/test/info", function(model){
+            var object = JSON.parse(model);
+            $scope.$apply(function () {
+            // Put your code that updates any $scope variables here
+            $scope.main.version = object.__v;
+            });
         });
-    });
-
-
-     
+             
     }]);
 
