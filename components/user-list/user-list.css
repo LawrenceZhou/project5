@@ -10,14 +10,14 @@ ul.cs142Project5 li {
 	font-weight:bold;
 	color: #2f36a9;	
 	text-decoration:none;	
-	padding:8px 0 8px 12px;
+	padding:8px 0 8px 0px;
 	background: #dadbf1;
 	height:48px;
 	text-align: center;
 }
 
 ul.cs142Project5 li:hover {
-	padding:8px 0px 8px 24px;
+	padding:8px 0px 8px 0px;
 	background: #dadbf1;
 	color: #339900;
 	border-left:4px solid #2f36a9;
