@@ -8,7 +8,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
      */
     var userId = $routeParams.userId;
     //$scope.user = window.cs142models.userModel(userId);
-    $scope.FetchModel("http://localhost:3000/user/{{userId}}", function(model){
+    $scope.FetchModel("http://localhost:3000/user/{{routeParams.userId}}", function(model){
             var object = JSON.parse(model);
             $scope.$apply(function () {
             // Put your code that updates any $scope variables here
