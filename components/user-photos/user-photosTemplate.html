@@ -2,7 +2,7 @@
 <img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}">
 <div class = "photoTime">{{photo.date_time}}</div>
 <div class ="comment" ng-repeat = "comment in photo.comments">
-	<div class="userView"><a href="#/photos/{{comment.user._id}}">{{comment.user.first_name + " " + comment.user.last_name}}</a></div>
+	<div class="userView"><a href="#/users/{{comment.user._id}}">{{comment.user.first_name + " " + comment.user.last_name}}</a></div>
 	<div class="commentTime">{{comment.date_time}}</div>
 	{{comment.comment}}
 </div>
