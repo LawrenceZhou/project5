@@ -17,13 +17,12 @@ ul.cs142Project5 li {
 }
 
 ul.cs142Project5 li:hover {
-	padding:3px 0px 3px 0px;
+	padding:8px 0px 8px 0px;
 	background: #dadbf1;
 	color: #339900;
 	border-left:4px solid #2f36a9;
-	font-size: 42px;
 	text-align: center;
-	height:48px;
+	height:54px;
 }
 
 
