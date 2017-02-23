@@ -36,5 +36,6 @@ div.cs142Project5-friendsHeader {
 	height:48px;
 	color: #dadbf1;
 	font-size: 32px;
-	padding:8px 0px 3px 40px;
+	text-align: center;
+	padding:8px 0px 3px 0px;
 }
