@@ -9,7 +9,6 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
     var userId = $routeParams.userId;
     //$scope.user = window.cs142models.userModel(userId);
     var url = "http://localhost:3000/user/" + userId;
-    console.log(url);
     $scope.FetchModel(url, function(model){
             var object = JSON.parse(model);
             $scope.$apply(function () {
