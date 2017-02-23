@@ -1,9 +1,9 @@
-ul {
+ul.cs142Project5 {
 	list-style:none;
 	margin:10px 0 10px 15px;
 	padding:0;		
 }
-ul li {
+ul.cs142Project5 li {
 	margin-bottom:1px;
 	border: 1px solid #f2f2f2;
 	display:block;
@@ -15,13 +15,9 @@ ul li {
 	height:40px;
 }
 
-ul li:hover {
+ul.cs142Project5 li:hover {
 	padding:3px 5px 3px 10px;
 	background: #f2f2f2;
 	color: #339900;
 	border-left:4px solid #9EC630;
-}
-
-a {
-	text-decoration: none;
 }
