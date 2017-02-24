@@ -75,5 +75,5 @@ function changView() {
     console.log("disabled!");
     return true;
 
-}
+};
 
