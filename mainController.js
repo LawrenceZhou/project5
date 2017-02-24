@@ -50,6 +50,7 @@ cs142App.controller('MainController', ['$scope',
         }else{
             console.log("disabled!");
         }
+        callBack();
     };
 
         $scope.FetchModel = function(url, doneCallback) {
