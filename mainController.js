@@ -44,7 +44,7 @@ cs142App.controller('MainController', ['$scope', '$route',
 
     $scope.changeView = function() {
         console.log($route.current.params.length);
-        if ($route.current.params.length === 0){
+        if ($route.current.params.length === undefined){
             console.log("1");
         }/*else if($location.path() === "/users/:userid") {
             console.log("123"+$location.path());
