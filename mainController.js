@@ -31,6 +31,7 @@ cs142App.controller('MainController', ['$scope',
         $scope.main = {};
         $scope.main.title = 'Users';
         $scope.main.toolBar = '';
+        $scope.checked = 0;
 
          /*
       * FetchModel - Fetch a model from the web server.
@@ -73,8 +74,10 @@ cs142App.controller('MainController', ['$scope',
 function changeView() {
     if(document.getElementById('advanceFeature').checked){
         //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
+            $scope.checked = 1;
             console.log("enabled!");
         }else{
+            $scope.checked = 0;
             console.log("disabled!");
         }
 };

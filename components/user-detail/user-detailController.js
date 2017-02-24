@@ -22,6 +22,19 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
         });
     });
 
+    if($scope.checked === 0) {
+        $scope.link = $scope.user._id;
+    }else {
+         $scope.FetchModel("http://localhost:3000/photosOfUser/" + userId, function(model){
+        var object = JSON.parse(model);
+        $scope.$apply(function () {
+            // Put your code that updates any $scope variables here
+            $scope.photos = object;
+        });
+    });
+        $scope.link = $scope.user._id + $scope.photos[0]._id;
+    }
+
     //var firstName = $scope.user.first_name;
     //var lastName = $scope.user.last_name;
     //$scope.main.toolBar = firstName + " " + lastName;
