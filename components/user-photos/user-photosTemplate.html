@@ -1,22 +1,11 @@
-<div class = "photoBlock" ng-repeat = "photo in photos">
-<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}">
-<div class = "photoTime">{{photo.date_time}}</div>
-<div class ="comment" ng-repeat = "comment in photo.comments">
-	<div class="userView"><a href="#/users/{{comment.user._id}}">{{comment.user.first_name + " " + comment.user.last_name}}</a></div>
-	<div class="commentTime">{{comment.date_time}}</div>
-	{{comment.comment}}
-</div>
-</div>
-
-
 <md-card class = "photoBlock" ng-repeat = "photo in photos">
-	<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}" class="md-card-image">
+	<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}" class="cs142Project5--image">
 	<div class = "cs142Project5-photoTime" align = "right">posted on {{photo.date_time}}</div>
     <md-card-content>
 		<md-list flex="">
-        <md-subheader class="md-no-sticky">Comments</md-subheader>
-        <md-list-item class="md-3-line" ng-repeat="comment in photo.comments">
-          <div class="md-list-item-text" layout="column">
+        <md-subheader class="cs142Project5-sticky">Comments</md-subheader>
+        <md-list-item class="cs142Project5-line" ng-repeat="comment in photo.comments">
+          <div class="cs142Project5-item-text" layout="column">
             <h3><a href="#/users/{{comment.user._id}}" class = "cs142Project5-commentUser">{{comment.user.first_name + " " + comment.user.last_name}}</a></h3>
             <h4>{{comment.date_time}}</h4>
             <p>{{comment.comment}}</p>
