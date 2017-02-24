@@ -63,17 +63,18 @@ cs142App.controller('MainController', ['$scope',
             $scope.main.version = object.__v;
             });
         });
+
+        if(document.getElementById('advanceFeature').checked){
+        //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
+            console.log("enabled!");
+        }else{
+            console.log("disabled!");
+        }
              
     }]);
 
-function changeView() {
-     if(document.getElementById('advanceFeature').checked){
-        //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
-        console.log("enabled!");
-        return false;
-    }
-    console.log("disabled!");
-    return true;
+
+
 
 };
 
