@@ -22,7 +22,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
         });
     });
 
-    if($scope.checked === 0) {
+    if(!$scope.checked) {
         $scope.link = userId;
     }else {
          $scope.FetchModel("http://localhost:3000/photosOfUser/" + userId, function(model){
@@ -32,7 +32,8 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
             $scope.photos = object;
         });
     });
-        $scope.link = userId + $scope.photos[0]._id;
+         console.log($scope.photos);
+        $scope.link = userId + "/"+ $scope.photos[0]._id;
     }
 
     //var firstName = $scope.user.first_name;
