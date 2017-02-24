@@ -42,9 +42,12 @@ cs142App.controller('MainController', ['$scope', '$location',
       *                  the error case.
       */
 
-      console.log($location.path());
     $scope.changeView = function() {
-        /*if ($location.path === "")
+        if ($location.path() === "/users"){
+            console.log($location.path());
+        }else if($location.path() === "/users/:userid") {
+            console.log("123"+$location.path());
+        }
         /*if($scope.checked){
         //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
             console.log("enabled!");
