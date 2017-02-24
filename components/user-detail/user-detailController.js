@@ -23,7 +23,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
     });
 
 
-    $scope.changeView(){
+    $scope.changeView = function(){
         if($scope.checked) {
         $scope.FetchModel("http://localhost:3000/photosOfUser/" + userId, function(model){
         var object = JSON.parse(model);
