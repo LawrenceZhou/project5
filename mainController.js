@@ -42,7 +42,7 @@ cs142App.controller('MainController', ['$scope', '$location',
       *                  the error case.
       */
 
-      console.log($location.path);
+      console.log($location.path());
     $scope.changeView = function() {
         /*if ($location.path === "")
         /*if($scope.checked){
