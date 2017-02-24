@@ -21,6 +21,17 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
             $scope.main.title = 'User Detail';
         });
     });
+
+    $scope.changeView = function(callBack) {
+        if($scope.checked){
+        //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
+            console.log("enabled!");
+        }else{
+            console.log("disabled!");
+        }
+        callBack();
+    };
+    
     $scope.changeView(function(){
         if($scope.checked) {
         $scope.FetchModel("http://localhost:3000/photosOfUser/" + userId, function(model){
