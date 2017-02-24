@@ -46,8 +46,18 @@ cs142App.controller('MainController', ['$scope',
     $scope.changeView = function() {
         if($scope.checked){
         //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
+            $scope.FetchModel("http://localhost:3000/photosOfUser/" + userId, function(model){
+                var object = JSON.parse(model);
+                $scope.$apply(function () {
+                    // Put your code that updates any $scope variables here
+                    $scope.photos = object;
+                    console.log($scope.photos);
+                    $scope.link = userId + "/"+ $scope.photos[0]._id;
+                });
+            });
             console.log("enabled!");
         }else{
+            $scope.link = userId;
             console.log("disabled!");
         }
     };
