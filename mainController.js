@@ -44,12 +44,10 @@ cs142App.controller('MainController', ['$scope',
 
 
     $scope.changeView = function() {
-        if(document.getElementById('advanceFeature').checked){
+        if($scope.checked){
         //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
-            $scope.checked = 1;
             console.log("enabled!");
         }else{
-            $scope.checked = 0;
             console.log("disabled!");
         }
     };
