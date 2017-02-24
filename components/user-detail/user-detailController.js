@@ -31,11 +31,11 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
             // Put your code that updates any $scope variables here
             $scope.photos = object;
             console.log($scope.photos);
-            $scope.link = userId + "/"+ $scope.photos[0]._id;
+            $scope.link ="#/photos/" + userId + "/"+ $scope.photos[0]._id;
         });
     });
     }else {
-        $scope.link = userId;
+        $scope.link = "#/photos/" + userId;
     }
     //}; 
 
