@@ -66,3 +66,14 @@ cs142App.controller('MainController', ['$scope',
              
     }]);
 
+function changView() {
+     if(document.getElementById('advanceFeature').checked){
+        //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
+        console.log("enabled!");
+        return false;
+    }
+    console.log("disabled!");
+    return true;
+
+}
+
