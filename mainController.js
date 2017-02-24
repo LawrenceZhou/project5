@@ -43,7 +43,7 @@ cs142App.controller('MainController', ['$scope',
       */
 
 
-    $scope.changeView = function() {
+    $scope.changeView = function(callBack) {
         if($scope.checked){
         //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
             console.log("enabled!");
