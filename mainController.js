@@ -26,8 +26,8 @@ cs142App.config(['$routeProvider',
             });
     }]);
 
-cs142App.controller('MainController', ['$scope', '$location', 
-    function ($scope, $location) {
+cs142App.controller('MainController', ['$scope', '$route', 
+    function ($scope, $route) {
         $scope.main = {};
         $scope.main.title = 'Users';
         $scope.main.toolBar = '';
@@ -43,8 +43,8 @@ cs142App.controller('MainController', ['$scope', '$location',
       */
 
     $scope.changeView = function() {
-        if ($location.path() === "/users"){
-            console.log($location.path());
+        if ($route.current.params.length === 0){
+            console.log("1");
         }else if($location.path() === "/users/:userid") {
             console.log("123"+$location.path());
         }
