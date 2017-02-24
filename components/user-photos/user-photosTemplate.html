@@ -11,7 +11,7 @@
 
 <md-card class = "photoBlock" ng-repeat = "photo in photos">
 	<img ng-src = "/images/{{photo.file_name}}" alt = "{{photo.file_name}}" class="md-card-image">
-	<p>posted on {{photo.date_time}}</p>
+	<div class = "photoTime">posted on {{photo.date_time}}</div>
     <md-card-content>
 		<md-list flex="">
         <md-subheader class="md-no-sticky">Comments</md-subheader>
