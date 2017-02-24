@@ -48,7 +48,7 @@ cs142App.controller('MainController', ['$scope',
                 }
                 var model = this.responseText;
                 doneCallback(model);
-            }
+            };
 
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = xhrHandler;
