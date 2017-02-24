@@ -37,7 +37,7 @@ cs142App.controller('MainController', ['$scope',
       *                  the error case.
       */
         $scope.FetchModel = function(url, doneCallback) {
-            function xhrHandler() {
+            var  xhrHandler = function() {
                 //Don’t do anything if not final state
                 if (this.readyState!== 4){ 
                     return; 
