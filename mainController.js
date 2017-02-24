@@ -48,13 +48,13 @@ cs142App.controller('MainController', ['$scope',
                 }
                 var model = this.responseText;
                 doneCallback(model);
-            };
-            
+            }
+
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = xhrHandler;
             xhr.open("GET", url);
             xhr.send();
-        }
+        };
 
         $scope.FetchModel("http://localhost:3000/test/info", function(model){
             var object = JSON.parse(model);
