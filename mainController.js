@@ -26,8 +26,8 @@ cs142App.config(['$routeProvider',
             });
     }]);
 
-cs142App.controller('MainController', ['$scope', '$route', 
-    function ($scope, $route) {
+cs142App.controller('MainController', ['$scope', '$route', '$location'
+    function ($scope, $route, $location) {
         $scope.main = {};
         $scope.main.title = 'Users';
         $scope.main.toolBar = '';
@@ -46,8 +46,21 @@ cs142App.controller('MainController', ['$scope', '$route',
         console.log($route.current.params.length);
         if ($route.current.params.length === undefined){
             console.log("1");
-        }/*else if($location.path() === "/users/:userid") {
+        }else if($location.path().substring(0, 6) === "/users") {
             console.log("123"+$location.path());
+            if($scope.checked) {
+        $scope.FetchModel("http://localhost:3000/photosOfUser/" + $scope.userId, function(model){
+        var object = JSON.parse(model);
+        $scope.$apply(function () {
+            // Put your code that updates any $scope variables here
+            $scope.photos = object;
+            console.log($scope.photos);
+            $scope.link ="#/photos/" + userId + "/"+ $scope.photos[0]._id;
+        });
+    });
+    }else {
+        $scope.link = "#/photos/" + $scope.userId;
+    }
         }
         /*if($scope.checked){
         //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
