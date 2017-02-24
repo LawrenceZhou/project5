@@ -72,9 +72,3 @@ cs142App.controller('MainController', ['$scope',
         }
              
     }]);
-
-
-
-
-};
-
