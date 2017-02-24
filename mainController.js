@@ -66,7 +66,7 @@ cs142App.controller('MainController', ['$scope',
              
     }]);
 
-function changView() {
+function changeView() {
      if(document.getElementById('advanceFeature').checked){
         //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
         console.log("enabled!");
