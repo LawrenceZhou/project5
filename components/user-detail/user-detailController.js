@@ -26,7 +26,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
     //$scope.main.toolBar = firstName + " " + lastName;
     //$scope.user.name = firstName + " " + lastName;
 
-    console.log('window.cs142models.userModel($routeParams.userId)',
-        window.cs142models.userModel(userId));
+    //console.log('window.cs142models.userModel($routeParams.userId)',
+    //    window.cs142models.userModel(userId));
 
   }]);

@@ -51,9 +51,9 @@ cs142App.controller('MainController', ['$scope',
                 //Final State but status not OK
                 if (this.status !== 200) {
                 return;
-            }
-            var model = this.responseText;
-            doneCallback(model);
+                }
+                var model = this.responseText;
+                doneCallback(model);
             };
         }
 

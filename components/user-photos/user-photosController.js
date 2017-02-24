@@ -35,7 +35,7 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams',
     //var lastName = $scope.user.last_name;
     //$scope.main.toolBar = "Photos of " + firstName + " " + lastName;
 
-    console.log('window.cs142models.photoOfUserModel($routeParams.userId)',
-       window.cs142models.photoOfUserModel(userId));
+    //console.log('window.cs142models.photoOfUserModel($routeParams.userId)',
+    //   window.cs142models.photoOfUserModel(userId));
 
   }]);
