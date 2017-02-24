@@ -26,7 +26,6 @@ cs142App.controller('UserPhotosController', ['$scope', '$routeParams',
             var lastName = $scope.user.last_name;
             $scope.main.toolBar = "Photos of " + firstName + " " + lastName;
             $scope.user.name = firstName + " " + lastName;
-            $scope.main.title = 'User Photos';
         });
     });
 

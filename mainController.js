@@ -17,6 +17,10 @@ cs142App.config(['$routeProvider',
                 templateUrl: 'components/user-photos/user-photosTemplate.html',
                 controller: 'UserPhotosController'
             }).
+            when('/photos/:userId/:photoId', {
+                templateUrl: 'components/photos-view/photos-viewTemplate.html',
+                controller: 'ViewPhotosController'
+            }).
             otherwise({
                 redirectTo: '/users'
             });

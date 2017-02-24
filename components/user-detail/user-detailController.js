@@ -18,6 +18,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
             var lastName = $scope.user.last_name;
             $scope.main.toolBar = firstName + " " + lastName;
             $scope.user.name = firstName + " " + lastName;
+            $scope.main.title = 'User Detail';
         });
     });
 
