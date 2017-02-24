@@ -26,7 +26,7 @@ cs142App.config(['$routeProvider',
             });
     }]);
 
-cs142App.controller('MainController', ['$scope' '$location', 
+cs142App.controller('MainController', ['$scope', '$location', 
     function ($scope, $location) {
         $scope.main = {};
         $scope.main.title = 'Users';
