@@ -43,7 +43,7 @@ cs142App.controller('MainController', ['$scope', '$route', '$location',
       */
 
     $scope.changeView = function() {
-        console.log($route.current.params，$route.current.params.length);
+        console.log($route.current.params, $route.current.params.length);
         console.log("123"+$location.path().substring(0, 6));
         if ($route.current.params.length === undefined){
             console.log("1");
