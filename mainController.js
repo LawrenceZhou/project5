@@ -43,6 +43,17 @@ cs142App.controller('MainController', ['$scope',
       */
 
 
+    $scope.changeView = function() {
+        if(document.getElementById('advanceFeature').checked){
+        //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
+            $scope.checked = 1;
+            console.log("enabled!");
+        }else{
+            $scope.checked = 0;
+            console.log("disabled!");
+        }
+    };
+
         $scope.FetchModel = function(url, doneCallback) {
             var  xhrHandler = function() {
                 //Don’t do anything if not final state
@@ -72,14 +83,3 @@ cs142App.controller('MainController', ['$scope',
         });
              
     }]);
-
-    $scope.changeView = function() {
-        if(document.getElementById('advanceFeature').checked){
-        //window.location='https://www.yousendit.com/dropbox?dropbox=mydomain';
-            $scope.checked = 1;
-            console.log("enabled!");
-        }else{
-            $scope.checked = 0;
-            console.log("disabled!");
-        }
-    };
