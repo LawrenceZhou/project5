@@ -37,12 +37,7 @@ cs142App.controller('MainController', ['$scope',
       *                  the error case.
       */
         $scope.FetchModel = function(url, doneCallback) {
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = xhrHandler;
-            xhr.open("GET", url);
-            xhr.send();
-    
-            function xhrHandler() {
+            var  xhrHandler = function() {
                 //Don’t do anything if not final state
                 if (this.readyState!== 4){ 
                     return; 
@@ -54,7 +49,12 @@ cs142App.controller('MainController', ['$scope',
                 var model = this.responseText;
                 doneCallback(model);
             };
-        }
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = xhrHandler;
+            xhr.open("GET", url);
+            xhr.send();
+        };
 
         $scope.FetchModel("http://localhost:3000/test/info", function(model){
             var object = JSON.parse(model);
