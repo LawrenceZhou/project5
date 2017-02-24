@@ -23,3 +23,7 @@ span.md-headline {
 	font-size: 32px;
 	color: #2f36a9;
 }
+
+md-card.cs142Project5-userBlock {
+	width: 600px; 
+}
