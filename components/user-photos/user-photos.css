@@ -7,3 +7,7 @@ div.cs142Project5-photoTime {
 	margin: 5px 10px 5px 10px;
 	color: #626262;
 }
+
+md-card.cs142Project5-photoBlock {
+	width: 150px;
+}
