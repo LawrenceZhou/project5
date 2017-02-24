@@ -23,7 +23,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
     });
 
     if($scope.checked === 0) {
-        $scope.link = $scope.user._id;
+        $scope.link = userId;
     }else {
          $scope.FetchModel("http://localhost:3000/photosOfUser/" + userId, function(model){
         var object = JSON.parse(model);
@@ -32,7 +32,7 @@ cs142App.controller('UserDetailController', ['$scope', '$routeParams',
             $scope.photos = object;
         });
     });
-        $scope.link = $scope.user._id + $scope.photos[0]._id;
+        $scope.link = userId + $scope.photos[0]._id;
     }
 
     //var firstName = $scope.user.first_name;
